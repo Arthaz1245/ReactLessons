@@ -1,13 +1,12 @@
 .square{
-    border: 5px solid black;  
-    width: 300px;
-    height: 300px;
-    border-radius: 25px;
-    position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
+    border: 2px solid black;  
+    width: 400px;
+    height: 400px;
+    place-content: center;
+    border-radius: 0.25rem;
+    display: grid;
   
+}
+.square p{
+    text-align: center;
 }
