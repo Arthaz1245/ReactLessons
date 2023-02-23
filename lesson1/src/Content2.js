@@ -1,5 +1,6 @@
 import ItemList from "./ItemList";
-const Content2 = ({ items, handleCheck, handleDelete }) => {
+
+const Content = ({ items, handleCheck, handleDelete }) => {
   return (
     <main>
       {items.length ? (
@@ -9,10 +10,10 @@ const Content2 = ({ items, handleCheck, handleDelete }) => {
           handleDelete={handleDelete}
         />
       ) : (
-        <p style={{ marginTop: "2rem" }}>Your list is empty</p>
+        <p style={{ marginTop: "2rem" }}>Your list is empty.</p>
       )}
     </main>
   );
 };
 
-export default Content2;
+export default Content;
