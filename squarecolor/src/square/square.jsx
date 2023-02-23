@@ -1,9 +1,16 @@
 import "./square.css";
-const square = ({ color }) => {
+const square = ({ color, hexValue, isDarkText }) => {
   return (
     <main>
-      <div className="square" style={{ backgroundColor: `${color}` }}>
+      <div
+        className="square"
+        style={{
+          backgroundColor: `${color}`,
+          color: isDarkText ? "#000" : "#fff",
+        }}
+      >
         <p>{color ? color : "Empty Value"}</p>
+        <p>{hexValue ? hexValue : null}</p>
       </div>
     </main>
   );

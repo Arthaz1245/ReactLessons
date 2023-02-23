@@ -1,5 +1,12 @@
 import "./SearchBar.css";
-const SearchBar = ({ color, setColor }) => {
+import colorNames from "colornames";
+const SearchBar = ({
+  color,
+  setColor,
+  setHexValue,
+  isDarkText,
+  setIsDarkText,
+}) => {
   return (
     <form
       action=""
@@ -13,8 +20,14 @@ const SearchBar = ({ color, setColor }) => {
         placeholder="type color"
         value={color}
         className="Inputbar"
-        onChange={(e) => setColor(e.target.value)}
+        onChange={(e) => {
+          setColor(e.target.value);
+          setHexValue(colorNames(e.target.value));
+        }}
       />
+      <button type="button" onClick={setIsDarkText(!isDarkText)}>
+        toggle
+      </button>
     </form>
   );
 };
